@@ -9,8 +9,8 @@ public class Chat {
     public static void main(String[] args){
 
         try{
-            ChatApplication start = new ChatApplication();
-
+            ChatApplication chat = new ChatApplication();
+            chat.begin();
         } catch(IOException e){
             System.out.println(e);
         }
