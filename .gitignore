@@ -4,3 +4,6 @@
 .settings/
 .project
 /bin/
+ChatProgram.iml
+lib/
+out/
