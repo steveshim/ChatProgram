@@ -62,7 +62,7 @@ public class ChatApplication {
                     if (socket == null)
                         System.out.println("ERROR: Not connected");
                     else
-                        connectValidator(choice);
+                        connectValidator(userInput);
                     break;
                 case "list":
                     if (socket == null)
@@ -74,13 +74,13 @@ public class ChatApplication {
                     if (socket == null)
                         System.out.println("ERROR: Not connected");
                     else
-                        terminateValidator(choice);
+                        terminateValidator(userInput);
                     break;
                 case "send":
                     if (socket == null)
                         System.out.println("ERROR: Not connected");
                     else
-                        sendValidator(choice);
+                        sendValidator(userInput);
                     break;
                 case "exit":
                     System.exit(0);
@@ -303,6 +303,9 @@ public class ChatApplication {
 
     private boolean isValidConnectString(String input){
         String[] connectString = input.split(" ");
+        System.out.println(connectString.length);
+        System.out.println(connectString[0]);
+        System.out.println(connectString[2]);
         return (connectString.length == 3 && connectString[0].equals("connect") && isValidPort(connectString[2]));
     }
 
