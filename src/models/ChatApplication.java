@@ -303,9 +303,6 @@ public class ChatApplication {
 
     private boolean isValidConnectString(String input){
         String[] connectString = input.split(" ");
-        System.out.println(connectString.length);
-        System.out.println(connectString[0]);
-        System.out.println(connectString[2]);
         return (connectString.length == 3 && connectString[0].equals("connect") && isValidPort(connectString[2]));
     }
 
