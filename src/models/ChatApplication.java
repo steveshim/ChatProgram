@@ -312,7 +312,7 @@ public class ChatApplication {
     private void connectSuccessfulMessage(String jsonString) throws IOException{
         String tempIp = JSONHelper.parse(jsonString, "ip");
         int tempPort = Integer.valueOf(JSONHelper.parse(jsonString, "port"));
-        System.out.print("\nUser with ip: " + tempIp + ", on port: " + tempPort + " has connected to you.");
+        System.out.println("\nUser with ip: " + tempIp + ", on port: " + tempPort + " has connected to you.");
         User tempUser = new User(tempIp, tempPort);
         users.add(tempUser);
         userOutput.put(tempUser, new DataOutputStream(tempUser.getSocket().getOutputStream()));
