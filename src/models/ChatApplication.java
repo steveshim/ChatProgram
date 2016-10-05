@@ -341,7 +341,7 @@ public class ChatApplication {
     private void displayMessage(String senderIp, int senderPort, String message){
         System.out.println("\nMessage received from IP: " + senderIp);
         System.out.println("Sender's port number: " + senderPort);
-        System.out.println(message);
+        System.out.println("Message: " + message);
     }
 
     /**
