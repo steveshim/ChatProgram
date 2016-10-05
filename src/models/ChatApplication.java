@@ -34,6 +34,7 @@ public class ChatApplication {
      */
     public void begin() throws IOException{
         System.out.println("Beginning Chat Program for CS4470.");
+        System.out.println("Type 'chat <port number>' to initiate chat or 'help' for more options.");
 
         while(true){
             String userInput = input.readLine();
@@ -83,6 +84,7 @@ public class ChatApplication {
                         sendValidator(userInput);
                     break;
                 case "exit":
+                    System.out.println("You have exited the chat program. Goodbye.");
                     System.exit(0);
                     break;
                 default:
